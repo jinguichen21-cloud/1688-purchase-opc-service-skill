@@ -1,0 +1,77 @@
+[
+  {
+    "user_intent": "帮我推荐几款适合办公室批量采购的A4打印纸",
+    "should_call": "1688_opc_purchase_service",
+    "assertions": ["返回结果分两部分", "商品最多3个", "第二部分为固定采购提示和深链", "下单连接展示为[1688企业采购agent](...)"]
+  },
+  {
+    "user_intent": "行政要找高性价比复印纸，给我推荐几个1688货源",
+    "should_call": "1688_opc_purchase_service",
+    "assertions": ["触发推荐能力", "优先展示价格和商品链接"]
+  },
+  {
+    "user_intent": "想在1688上找办公椅供应商，先给我选几个合适的",
+    "should_call": "1688_opc_purchase_service",
+    "assertions": ["返回商品列表", "不超过3个"]
+  },
+  {
+    "user_intent": "帮我比价一下会议室白板和支架套餐",
+    "should_call": "1688_opc_purchase_service",
+    "assertions": ["展示商品价格", "输出采购助手深链"]
+  },
+  {
+    "user_intent": "推荐几款适合企业采购的笔记本电脑支架",
+    "should_call": "1688_opc_purchase_service",
+    "assertions": ["触发商品推荐", "第二部分文案固定"]
+  },
+  {
+    "user_intent": "帮公司找一批便宜又耐用的垃圾袋货源",
+    "should_call": "1688_opc_purchase_service",
+    "assertions": ["根据采购描述推荐商品"]
+  },
+  {
+    "user_intent": "我想从1688选几款员工福利礼盒，先给我推荐",
+    "should_call": "1688_opc_purchase_service",
+    "assertions": ["商品不超过3个", "包含下单深链"]
+  },
+  {
+    "user_intent": "帮我找适合财务部用的碎纸机，先看几个货",
+    "should_call": "1688_opc_purchase_service",
+    "assertions": ["输出商品标题价格链接"]
+  },
+  {
+    "user_intent": "有没有适合大办公室采购的矿泉水整箱货源，帮我推荐下",
+    "should_call": "1688_opc_purchase_service",
+    "assertions": ["触发推荐能力", "返回引导文案"]
+  },
+  {
+    "user_intent": "给我挑几款性价比高的文件收纳柜",
+    "should_call": "1688_opc_purchase_service",
+    "assertions": ["从采购描述直接召回", "不要求先补齐完整规格"]
+  },
+  {
+    "user_intent": "我现在就要下单付款",
+    "should_call": "none",
+    "assertions": ["不触发本技能", "说明当前能力只负责推荐和引导"]
+  },
+  {
+    "user_intent": "帮我查下昨天买的那批打印纸发货了没",
+    "should_call": "none",
+    "assertions": ["不触发本技能", "不处理物流查询"]
+  },
+  {
+    "user_intent": "仓库里还剩多少A4纸",
+    "should_call": "none",
+    "assertions": ["不触发本技能", "不处理库存管理"]
+  },
+  {
+    "user_intent": "推荐几款公司前台用的接待茶杯套装，并给采购入口",
+    "should_call": "1688_opc_purchase_service",
+    "assertions": ["两部分输出", "第二部分含固定文案和采购入口", "采购入口标题固定为1688企业采购agent"]
+  },
+  {
+    "user_intent": "给企业行政采购推荐几款空气净化器，要能直接去采购助手",
+    "should_call": "1688_opc_purchase_service",
+    "assertions": ["下单链接中的corpId必须使用真实上下文值", "不能保留${corpId}占位符", "最终展示格式为[1688企业采购agent](...)"]
+  }
+]
