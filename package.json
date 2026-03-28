@@ -1,0 +1,5 @@
+{
+  "name": "1688-purchase-opc-service-skill",
+  "version": "0.1.0",
+  "description": "根据采购描述推荐1688商品，并固定输出商品列表、引导文案和带真实corpId的下单深链。"
+}
